@@ -1,0 +1,115 @@
+.tab-ribbon-container {
+  width: 100%;
+  background: white;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+.tab-ribbon-scroll {
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  max-height: 400px;
+}
+
+.tab-ribbon-content {
+  margin: 0;
+  padding: 0;
+  font-family: 'Courier New', 'Monaco', 'Menlo', monospace;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: #ffffff;
+  white-space: pre;
+  display: inline-block;
+  min-width: 100%;
+}
+
+.tab-line {
+  display: block;
+  white-space: pre;
+  margin: 0;
+  padding: 0;
+}
+
+/* Custom scrollbar styling */
+.tab-ribbon-scroll::-webkit-scrollbar {
+  height: 12px;
+}
+
+.tab-ribbon-scroll::-webkit-scrollbar-track {
+  background: #2d2d2d;
+  border-radius: 6px;
+}
+
+.tab-ribbon-scroll::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 6px;
+}
+
+.tab-ribbon-scroll::-webkit-scrollbar-thumb:hover {
+  background: #666;
+}
+
+
+.nav-button {
+  padding: 0.5rem 1rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-button:hover:not(:disabled) {
+  background-color: #3a80d2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.3);
+}
+
+.nav-button:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.nav-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.position-indicator {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.9rem;
+  min-width: 80px;
+  text-align: center;
+}
+
+.tab-ribbon-content-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.tab-highlight {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  background-color: transparent;
+  border: 2px solid rgba(255, 0, 0, 0.8);
+  border-left: 3px solid rgba(255, 0, 0, 0.8);
+  border-right: 3px solid rgba(255, 0, 0, 0.8);
+  pointer-events: auto;
+  z-index: 10;
+  box-shadow: 0 0 4px rgba(255, 0, 0, 0.5);
+  user-select: none;
+}
+
