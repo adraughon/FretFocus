@@ -4,7 +4,7 @@ An interactive guitar fretboard visualization tool with audio playback. Play sca
 
 **🌐 Live Demo:** [https://adraughon.github.io/FretFocus/](https://adraughon.github.io/FretFocus/)
 
-![FretFocus Screenshot](./screenshot.png)
+![FretFocus Screenshot](./FretFocus Screenshot.png)
 
 ## Features
 
