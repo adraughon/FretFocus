@@ -94,7 +94,8 @@ function Fretboard({ scalePositions = [], rootNote = '', numFrets = 16, contextC
     // Sound files are named like: A2.wav, B3.wav, C#3.wav, etc.
     // Note name already contains # for sharps (e.g., "C#")
     const fileName = `${note}${octave}.wav`;
-    return `/acoustic_guitar_sound_pack/${fileName}`;
+    // Use import.meta.env.BASE_URL to get the base path (e.g., '/FretFocus/' in production)
+    return `${import.meta.env.BASE_URL}acoustic_guitar_sound_pack/${fileName}`;
   }
 
   // Web Audio API context for pitch-shifting
@@ -119,7 +120,7 @@ function Fretboard({ scalePositions = [], rootNote = '', numFrets = 16, contextC
     const stringSample = stringSamples.find(s => s.stringIndex === stringIndex);
     if (!stringSample) return null;
     
-    const filePath = `/acoustic_guitar_sound_pack/${stringSample.file}`;
+    const filePath = `${import.meta.env.BASE_URL}acoustic_guitar_sound_pack/${stringSample.file}`;
     
     if (audioBufferCache.current.has(filePath)) {
       return audioBufferCache.current.get(filePath);

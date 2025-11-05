@@ -37,7 +37,7 @@ function App() {
     const stringSample = stringSamples.find(s => s.stringIndex === stringIndex);
     if (!stringSample) return null;
     
-    const filePath = `/acoustic_guitar_sound_pack/${stringSample.file}`;
+    const filePath = `${import.meta.env.BASE_URL}acoustic_guitar_sound_pack/${stringSample.file}`;
     
     if (audioBufferCache.current.has(filePath)) {
       return audioBufferCache.current.get(filePath);
